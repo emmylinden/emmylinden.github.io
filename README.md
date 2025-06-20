@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+This portfolio is currently under construction. Check back soon!
+
 <!--
 **emmylinden/emmylinden** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
