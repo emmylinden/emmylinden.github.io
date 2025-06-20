@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .back-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .meta-value {
+            color: #7f8c8d;
+        }
+
+        .project-content {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .content-section ul {
+            margin-bottom: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .callout-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .callout-box h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .result-item {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .result-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #3498db;
+            display: block;
+        }
+
+        .result-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                padding: 2rem;
+            }
+
+            .project-meta {
+                gap: 1rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Your Name</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            
+            <div class="project-header">
+                <h1>Information Architecture Redesign</h1>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Lead Content Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline:</span>
+                        <span class="meta-value">3 months</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team:</span>
+                        <span class="meta-value">Product, Design, Engineering</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools:</span>
+                        <span class="meta-value">Figma, Miro, Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2>Overview</h2>
+                    <p>Our B2B software platform's documentation was becoming increasingly difficult to navigate as our product grew. Users were spending too much time searching for information, and our support team was fielding repetitive questions about basic functionality.</p>
+                    
+                    <div class="callout-box">
+                        <h4>The Challenge</h4>
+                        <p>How might we restructure our information architecture to help users find what they need quickly while supporting future content growth?</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Research & Discovery</h2>
+                    
+                    <h3>User Research</h3>
+                    <p>I conducted user interviews with 12 customers and analyzed 6 months of support ticket data to understand pain points:</p>
+                    <ul>
+                        <li>Users couldn't distinguish between different types of content (tutorials vs. reference docs)</li>
+                        <li>Search functionality returned too many irrelevant results</li>
+                        <li>Critical information was buried 3-4 clicks deep</li>
+                        <li>Mobile experience was particularly challenging</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        User Journey Map - Before State
+                    </div>
+
+                    <h3>Content Audit</h3>
+                    <p>I inventoried 200+ pieces of content and identified:</p>
+                    <div class="two-column">
+                        <div>
+                            <ul>
+                                <li>30% duplicate or outdated content</li>
+                                <li>Inconsistent categorization</li>
+                                <li>Missing content for key user tasks</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>No clear content hierarchy</li>
+                                <li>Inconsistent naming conventions</li>
+                                <li>Poor cross-linking between related topics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Strategy & Solution</h2>
+                    
+                    <h3>Information Architecture</h3>
+                    <p>Based on user mental models, I redesigned the IA around user goals rather than internal product structure:</p>
+                    
+                    <div class="image-placeholder">
+                        New Information Architecture Diagram
+                    </div>
+
+                    <h3>Key Design Decisions</h3>
+                    <ul>
+                        <li><strong>Task-oriented navigation:</strong> Organized content by what users want to accomplish</li>
+                        <li><strong>Progressive disclosure:</strong> Surface most common information first</li>
+                        <li><strong>Content types:</strong> Clear visual distinction between tutorials, references, and troubleshooting</li>
